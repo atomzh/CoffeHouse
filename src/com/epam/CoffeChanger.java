@@ -1,41 +1,45 @@
 package com.epam;
 
 public class CoffeChanger {
+    private String coffeName;
+    private int size;
 
-    public CoffeChanger(String coffeName) {
-        coffeChanging(coffeName);
+    public CoffeChanger(String coffeName,int size) {
+        this.coffeName=coffeName;
+        this.size=size;
+        coffeChanging();
     }
 
-    public void coffeChanging(String coffeName) {
+    public void coffeChanging() {
         while (true) {
-            Coffe coffe;
+            CoffeCreator coffe;
             switch (coffeName) {
                 case ("Americano"):
-                    coffe = new Americano();
+                    coffe = new CoffeCreator(coffeName,size);
                     break;
                 case ("Cappucino"):
-                    coffe = new Cappucino();
+                    coffe = new CoffeCreator(coffeName,size);
                     break;
                 case ("Espresso"):
-                    coffe = new Espresso();
+                    coffe = new CoffeCreator(coffeName,size);
                     break;
                 case ("Glace"):
-                    coffe = new Glace();
+                    coffe = new CoffeCreator(coffeName,size);
                     break;
                 case ("Latte"):
-                    coffe = new Latte();
+                    coffe = new CoffeCreator(coffeName,size);
                     break;
                 case ("Macchiato"):
-                    coffe = new Macchiato();
+                    coffe = new CoffeCreator(coffeName,size);
                     break;
                 case ("Mocha"):
-                    coffe = new Mocha();
+                    coffe = new CoffeCreator(coffeName,size);
                     break;
                 default:
                     System.out.println("Такого кофе нет, напишите правильно");
-                    coffeChanging(coffeName);
+                    Client client = new Client();
+                    break;
             }
-
         }
     }
 }

@@ -1,10 +1,9 @@
 package com.epam;
 
-public abstract class Coffe implements CoffeHouse {
-    private float sugar;
+public interface Coffe extends CoffeHouse {
 
-    public float sugar(float sugar){
-        return this.sugar = sugar;
-    }
+    public float sugar(float sugar);
+    public float result();
+    public float cost(float cost);
 
 }
