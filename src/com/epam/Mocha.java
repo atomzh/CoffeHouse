@@ -1,49 +1,43 @@
 package com.epam;
 
 public class Mocha implements Coffe {
-    private float milk;
-    private float water;
-    private float coffeOil;
+    private float milk = 60;
+    private float water = 30;
+    private float coffeOil = 30 ;
     private float result;
+    private float sugar;
+    private float cost;
+    private int size;
 
     @Override
-    public float sugar(float sugar) {
-        return 0;
+    public void setSugar(float sugar) {
+        this.sugar = sugar;
     }
 
     @Override
-    public float result() {
-        result=milk+water+coffeOil;
+    public float getResult() {
+        result=(milk+water+coffeOil)*size;
         return result;
     }
 
     @Override
-    public float cost(float cost) {
+    public void setCost(float cost) {
+        this.cost = cost;
+    }
+
+    @Override
+    public float getCost() {
         return cost;
     }
 
-    public void setMilk(float milk) {
-        this.milk = milk;
+    @Override
+    public float getSugar() {
+        return cost;
     }
 
-    public void setWater(float water) {
-        this.water = water;
-    }
-
-    public void setCoffeOil(float coffeOil) {
-        this.coffeOil = coffeOil;
-    }
-
-    public float getMilk() {
-        return milk;
-    }
-
-    public float getWater() {
-        return water;
-    }
-
-    public float getCoffeOil() {
-        return coffeOil;
+    @Override
+    public void setSize(int size) {
+        this.size = size;
     }
 
 }

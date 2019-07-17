@@ -1,40 +1,42 @@
 package com.epam;
 
 public class Espresso implements Coffe {
-    private float water;
-    private float coffeBeans;
+    private final float water = 35;
+    private final float coffeBeans = 10;
     private float result;
+    private float sugar;
+    private float cost;
+    private int size = 1;
 
     @Override
-    public float sugar(float sugar) {
-        return 0;
+    public void setSugar(float sugar) {
+        this.sugar=sugar;
     }
 
     @Override
-    public float result() {
-        result=coffeBeans+water;
+    public float getResult() {
+        result=(water+coffeBeans)*size;
         return result;
     }
 
     @Override
-    public float cost(float cost) {
+    public void setCost(float cost) {
+        this.cost=cost;
+    }
+
+    @Override
+    public float getCost() {
         return cost;
     }
 
-    public void setWater(float water) {
-        this.water = water;
+    @Override
+    public float getSugar() {
+        return sugar;
     }
 
-    public void setCoffeBeans(float coffeBeans) {
-        this.coffeBeans = coffeBeans;
-    }
-
-    public float getWater() {
-        return water;
-    }
-
-    public float getCoffeBeans() {
-        return coffeBeans;
+    @Override
+    public void setSize(int size) {
+        this.size *= size;
     }
 
 }
